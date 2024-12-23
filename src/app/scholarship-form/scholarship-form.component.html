@@ -1,0 +1,93 @@
+<h1 style="text-align: center;">Scholarship Application Form</h1>
+<hr>
+<form (ngSubmit)="onSubmit(scholarshipForm)" #scholarshipForm="ngForm">
+  <div>
+    <label for="aadharNumber">Aadhar Number:</label>
+    <input type="number" id="aadharNumber" [(ngModel)]="studentApplication.aadharNumber" name="aadharNumber" required placeholder="Enter Aadhar Number">
+    <div *ngIf="scholarshipForm.submitted && !scholarshipForm.controls['aadharNumber']?.valid" class="error">
+      Aadhar Number is required and must be numeric.
+    </div>
+  </div>
+  <div>
+    <label for="presentCourseYear">Present Course Year:</label>
+    <input type="number" id="presentCourseYear" [(ngModel)]="studentApplication.presentCourseYear" name="presentCourseYear" required placeholder="Enter Present Course Year">
+    <div *ngIf="scholarshipForm.submitted && !scholarshipForm.controls['presentCourseYear']?.valid" class="error">
+      Present Course Year is required and must be numeric.
+    </div>
+  </div>
+  <div>
+    <label for="instituteCode">Institute Code:</label>
+    <input type="text" id="instituteCode" [(ngModel)]="studentApplication.instituteCode" name="instituteCode" required placeholder="Enter Institute Code">
+    <div *ngIf="scholarshipForm.submitted && !scholarshipForm.controls['instituteCode']?.valid" class="error">
+      Institute Code is required.
+    </div>
+  </div>
+  <div>
+    <label for="instituteName">Institute Name:</label>
+    <input type="text" id="instituteName" [(ngModel)]="studentApplication.instituteName" name="instituteName" required placeholder="Enter Institute Name">
+    <div *ngIf="scholarshipForm.submitted && !scholarshipForm.controls['instituteName']?.valid" class="error">
+      Institute Name is required.
+    </div>
+  </div>
+  <div>
+    <label for="presentCourse">Present Course:</label>
+    <input type="text" id="presentCourse" [(ngModel)]="studentApplication.presentCourse" name="presentCourse" required placeholder="Enter Present Course">
+    <div *ngIf="scholarshipForm.submitted && !scholarshipForm.controls['presentCourse']?.valid" class="error">
+      Present Course is required.
+    </div>
+  </div>
+  <div>
+    <label for="modeOfStudy">Mode of Study:</label>
+    <select id="modeOfStudy" [(ngModel)]="studentApplication.modeOfStudy" name="modeOfStudy" required>
+      <option value="" disabled selected>Select Mode of Study</option>
+      <option value="part-time">Part-time</option>
+      <option value="full-time">Full-time</option>
+    </select>
+    <div *ngIf="scholarshipForm.submitted && !scholarshipForm.controls['modeOfStudy']?.valid" class="error">
+      Mode of Study is required.
+    </div>
+  </div>
+  <div>
+    <label for="classStartDate">Class Start Date:</label>
+    <input type="date" id="classStartDate" [(ngModel)]="studentApplication.classStartDate" name="classStartDate" required>
+    <div *ngIf="scholarshipForm.submitted && !scholarshipForm.controls['classStartDate']?.valid" class="error">
+      Class Start Date is required.
+    </div>
+  </div>
+  <div>
+    <label for="universityName">University Name:</label>
+    <input type="text" id="universityName" [(ngModel)]="studentApplication.universityName" name="universityName" required placeholder="Enter University Name">
+    <div *ngIf="scholarshipForm.submitted && !scholarshipForm.controls['universityName']?.valid" class="error">
+      University Name is required.
+    </div>
+  </div>
+  <div>
+    <label for="tuitionFee">Tuition Fee:</label>
+    <input type="number" id="tuitionFee" [(ngModel)]="studentApplication.tuitionFee" name="tuitionFee" required placeholder="Enter Tuition Fee">
+    <div *ngIf="scholarshipForm.submitted && !scholarshipForm.controls['tuitionFee']?.valid" class="error">
+      Tuition Fee is required and must be numeric.
+    </div>
+  </div>
+  <div>
+    <label for="scheme">Scheme:</label>
+    <select id="scheme" [(ngModel)]="studentApplication.scheme" name="scheme" required>
+      <option value="" disabled selected>Select Scheme</option>
+      <option value="National Merit Scholarship">National Merit Scholarship</option>
+      <option value="PRAGATI SCHOLARSHIP">PRAGATI SCHOLARSHIP</option>
+      <option value="POST MATRIC SCHOLARSHIP">POST MATRIC SCHOLARSHIP</option>
+    </select>
+    <div *ngIf="scholarshipForm.submitted && !scholarshipForm.controls['scheme']?.valid" class="error">
+      Scheme is required.
+    </div>
+  </div>
+  <button type="submit">Submit</button>
+  <button type="button" (click)="resetForm(scholarshipForm)">Reset</button>
+</form>
+
+<!-- Modal structure -->
+<div *ngIf="modalVisible" class="modal">
+  <div class="modal-content">
+    <span class="close" (click)="closeModal()">×</span>
+    <p>{{ modalMessage }}</p>
+  </div>
+</div>

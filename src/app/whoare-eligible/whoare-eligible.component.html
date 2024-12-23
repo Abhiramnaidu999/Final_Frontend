@@ -1,0 +1,10 @@
+<div class="eligibility-container">
+    <a routerLink="/WhoareEligible" class="Who are Eligible">Who are Eligible?</a>
+    <div *ngFor="let WhoAllEligible of eligibilityCriteria">
+      <h3>{{ WhoAllEligible.title }}</h3>
+      <ul>
+        <li *ngFor="let criterion of WhoAllEligible.criteria">{{ criterion }}</li>
+      </ul>
+    </div>
+  </div>
+  

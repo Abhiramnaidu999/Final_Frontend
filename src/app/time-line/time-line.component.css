@@ -1,0 +1,94 @@
+.timeline-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center; /* Center the text */
+    animation: fadeIn 1s ease-in-out;
+}
+
+.timeline-container h2 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.timeline-container a {
+    display: inline-block; /* Center the link */
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s, text-decoration 0.3s;
+}
+
+.timeline-container a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+.timeline-event {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+    display: inline-block; /* Center the cards */
+    width: 80%; /* Adjust width as needed */
+}
+
+.timeline-event:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-event h3 {
+    margin: 0 0 10px;
+    font-size: 1.5em;
+    color: #333;
+    position: relative;
+    z-index: 1;
+}
+
+.timeline-event p {
+    margin: 0;
+    font-size: 1em;
+    color: #666;
+    position: relative;
+    z-index: 1;
+}
+
+.timeline-event::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, rgba(255, 0, 0, 0.1), rgba(0, 0, 255, 0.1));
+    transform: rotate(45deg);
+    z-index: 0;
+    transition: opacity 0.3s;
+    opacity: 0;
+}
+
+.timeline-event:hover::before {
+    opacity: 1;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

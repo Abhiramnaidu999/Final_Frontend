@@ -1,0 +1,57 @@
+.about-us {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+  }
+  
+  .hero-section {
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    margin-bottom: 30px;
+  }
+  
+  .hero-section h1 {
+    font-size: 3em;
+    margin: 0;
+  }
+  
+  .hero-section p {
+    font-size: 1.5em;
+    margin: 10px 0 0;
+  }
+  
+  .content-section {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .content-section h2 {
+    font-size: 2em;
+    color: #4facfe;
+    margin-top: 20px;
+  }
+  
+  .content-section p {
+    font-size: 1.2em;
+    margin: 10px 0;
+  }
+  
+  .content-section ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .content-section ul li {
+    background: #f9f9f9;
+    margin: 10px 0;
+    padding: 10px;
+    border-left: 5px solid #4facfe;
+  }
+  
+  .content-section ul li strong {
+    color: #4facfe;
+  }
+  

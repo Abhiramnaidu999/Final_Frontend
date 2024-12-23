@@ -1,0 +1,61 @@
+<div *ngIf="studentApplications.length > 0; else noData">
+  
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Aadhar Number</th>
+        <th>Institute Code</th>
+        <th>Institute Name</th>
+        <th>Present Course</th>
+        <th>Present Course Year</th>
+        <th>Mode of Study</th>
+        <th>Class Start Date</th>
+        <th>University Name</th>
+        <th>Tuition Fee</th>
+        <th>Scheme</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let application of studentApplications">
+        <td>{{ application.applicatinId }}</td>
+        <td>{{ application.aadharNumber }}</td>
+        <td>{{ application.instituteCode }}</td>
+        <td>{{ application.instituteName }}</td>
+        <td>{{ application.presentCourse }}</td>
+        <td>{{ application.presentCourseYear }}</td>
+        <td>{{ application.modeOfStudy }}</td>
+        <td>{{ application.classStartDate | date }}</td>
+        <td>{{ application.universityName }}</td>
+        <td>{{ application.tuitionFee }}</td>
+        <td>{{ application.scheme }}</td>
+        <td>
+          <button (click)="acceptApplication(application.applicatinId)">Accept</button><br><br>
+          <button (click)="rejectApplication(application.aadharNumber)">Reject</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<ng-template #noData>
+  <p>No student applications found.</p>
+</ng-template>
+
+<!-- Confirmation Modal -->
+<div *ngIf="confirmRejectApplication" class="modal">
+  <div class="modal-content">
+    <span class="close" (click)="cancelReject()">×</span>
+    <p>Are you sure you want to reject this application?</p>
+    <button (click)="confirmReject()">Yes</button> &nbsp;
+    <button (click)="cancelReject()">No</button>
+  </div>
+</div>
+
+<!-- Message Modal -->
+<div *ngIf="modalVisible" class="modal">
+  <div class="modal-content">
+    <span class="close" (click)="closeModal()">×</span>
+    <p>{{ modalMessage }}</p>
+  </div>
+</div>

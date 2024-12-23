@@ -1,0 +1,46 @@
+<h2 *ngIf="!showForgotPasswordForm" style="text-align: center;"><i class="bi bi-person-circle"></i> &nbsp;Institute Login</h2>
+  <h2 *ngIf="showForgotPasswordForm">Update Password</h2>
+  <hr>
+<div class="form-container">
+  
+  
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" *ngIf="!showForgotPasswordForm">
+    <label for="code">Institute Code:</label>
+    <input type="text" id="code" formControlName="code" />
+    <div *ngIf="loginForm.get('code')?.touched && loginForm.get('code')?.invalid">
+      Institute Code is required.
+    </div>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" formControlName="password" />
+    <div *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.invalid">
+      Password is required.
+    </div>
+
+    <button type="submit">Login</button>
+    <button type="button" (click)="toggleForgotPassword()">Forgot Password</button>
+  </form>
+
+  <form [formGroup]="updatePasswordForm" (ngSubmit)="onUpdatePassword()" *ngIf="showForgotPasswordForm">
+    <label for="username">Institute Code:</label>
+    <input type="text" id="username" formControlName="code" />
+    <div *ngIf="updatePasswordForm.get('code')?.touched && updatePasswordForm.get('code')?.invalid">
+      Institute Code is required.
+    </div>
+
+    <label for="newPassword">New Password:</label>
+    <input type="password" id="newPassword" formControlName="newPassword" />
+    <div *ngIf="updatePasswordForm.get('newPassword')?.touched && updatePasswordForm.get('newPassword')?.invalid">
+      New Password is required.
+    </div>
+
+    <button type="submit">Update Password</button>
+  </form>
+</div>
+
+<div *ngIf="modalVisible" class="modal">
+  <div class="modal-content">
+    <span class="close-button" (click)="closeModal()">×</span>
+    <p>{{ modalMessage }}</p>
+  </div>
+</div>

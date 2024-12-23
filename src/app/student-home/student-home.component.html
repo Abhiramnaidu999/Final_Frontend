@@ -1,0 +1,29 @@
+<div class="student-home-container">
+    <h2>Student Home</h2>
+  
+    <!-- Schemes Section -->
+    <div class="schemes-container">
+      <a routerLink="/student-home" class="student-home"></a>
+      <div *ngFor="let scheme of schemes">
+        <h3>{{ scheme.title }}</h3>
+        <p>{{ scheme.description }}</p>
+      </div>
+    </div>
+  
+    <!-- Apply for Schemes Box -->
+    <div class="apply-box">
+      <h3>Apply for Schemes</h3>
+      <p>Click below to apply for the available schemes.</p>
+       
+
+      <!-- <ul>
+        <li><a routerLink="/apply-scholarship">Apply Now</a></li>
+      </ul> -->
+      <button routerLink="/apply-scholarship" class="button">Apply Now</button>
+
+      
+
+
+    </div>
+  </div>
+  

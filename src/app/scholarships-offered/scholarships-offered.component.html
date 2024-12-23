@@ -1,0 +1,9 @@
+<div class="scholarships-container">
+
+    <a routerLink="/scholarship" class="scholarships-offered">Scholarships Offered</a>
+    <div *ngFor="let scholarship of scholarships">
+      <h3>{{ scholarship.title }}</h3>
+      <p>{{ scholarship.description }}</p>
+    </div>
+  </div>
+  

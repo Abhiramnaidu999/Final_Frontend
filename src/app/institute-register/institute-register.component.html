@@ -1,0 +1,130 @@
+<div class="form-container">
+    <h2>Institute Registration Form</h2>
+    <form [formGroup]="instituteForm" (ngSubmit)="onSubmit()">
+      <label>Name:</label>
+      <input type="text" formControlName="name" />
+      <div *ngIf="instituteForm?.get('name')?.touched && instituteForm?.get('name')?.invalid">
+        Name is required.
+      </div>
+ 
+      <label>Code:</label>
+      <input type="text" formControlName="code" />
+      <div *ngIf="instituteForm?.get('code')?.touched && instituteForm?.get('code')?.invalid">
+        Code is required.
+      </div>
+ 
+      <label>State:</label>
+      <input type="text" formControlName="state" />
+      <div *ngIf="instituteForm?.get('state')?.touched && instituteForm?.get('state')?.invalid">
+        State is required.
+      </div>
+ 
+      <label>Location:</label>
+      <input type="text" formControlName="location" />
+      <div *ngIf="instituteForm?.get('location')?.touched && instituteForm?.get('location')?.invalid">
+        Location is required.
+      </div>
+ 
+      <label>District:</label>
+      <input type="text" formControlName="district" />
+      <div *ngIf="instituteForm?.get('district')?.touched && instituteForm?.get('district')?.invalid">
+        District is required.
+      </div>
+ 
+      <label>DISE Code:</label>
+      <input type="text" formControlName="diseCode" />
+      <div *ngIf="instituteForm?.get('diseCode')?.touched && instituteForm?.get('diseCode')?.invalid">
+        DISE Code is required.
+      </div>
+ 
+      <label>Institute Type:</label>
+      <input type="text" formControlName="instituteType" />
+      <div *ngIf="instituteForm?.get('instituteType')?.touched && instituteForm?.get('instituteType')?.invalid">
+        Institute Type is required.
+      </div>
+ 
+      <label>Affiliated By:</label>
+      <input type="text" formControlName="affiliatedBy" />
+      <div *ngIf="instituteForm?.get('affiliatedBy')?.touched && instituteForm?.get('affiliatedBy')?.invalid">
+        Affiliated By is required.
+      </div>
+ 
+      <label>Year Started:</label>
+      <input type="number" formControlName="yearStarted" />
+      <div *ngIf="instituteForm?.get('yearStarted')?.touched && instituteForm?.get('yearStarted')?.invalid">
+        Year Started is required and must be a 4-digit year.
+      </div>
+ 
+      <label>Password:</label>
+      <input type="password" formControlName="password" />
+      <div *ngIf="instituteForm?.get('password')?.touched && instituteForm?.get('password')?.invalid">
+        Password is required.
+      </div>
+ 
+      <label>Confirm Password:</label>
+      <input type="password" formControlName="confirmPassword" />
+      <div *ngIf="instituteForm?.get('confirmPassword')?.touched && instituteForm?.get('confirmPassword')?.invalid">
+        Confirm Password is required.
+      </div>
+ 
+      <label>Affiliated University:</label>
+      <input type="text" formControlName="affiliatedUniversity" />
+      <div *ngIf="instituteForm?.get('affiliatedUniversity')?.touched && instituteForm?.get('affiliatedUniversity')?.invalid">
+        Affiliated University is required.
+      </div>
+ 
+      <label>Proof of Institute:</label>
+      <input type="file" (change)="onFileChange($event, 'proofInstitute')" />
+      <div *ngIf="!proofInstituteFile">
+        Proof of Institute is required.
+      </div>
+ 
+      <label>Affiliated Document:</label>
+      <input type="file" (change)="onFileChange($event, 'affiliatedDocument')" />
+      <div *ngIf="!affiliatedDocumentFile">
+        Affiliated Document is required.
+      </div>
+ 
+      <label>Affiliated To:</label>
+      <input type="text" formControlName="affiliatedTo" />
+      <div *ngIf="instituteForm?.get('affiliatedTo')?.touched && instituteForm?.get('affiliatedTo')?.invalid">
+        Affiliated To is required.
+      </div>
+ 
+      <label>Address:</label>
+      <input type="text" formControlName="address" />
+      <div *ngIf="instituteForm?.get('address')?.touched && instituteForm?.get('address')?.invalid">
+        Address is required.
+      </div>
+ 
+      <label>Principal Name:</label>
+      <input type="text" formControlName="principalName" />
+      <div *ngIf="instituteForm?.get('principalName')?.touched && instituteForm?.get('principalName')?.invalid">
+        Principal Name is required.
+      </div>
+ 
+      <label>Mobile Number:</label>
+      <input type="text" formControlName="mobileNumber" />
+      <div *ngIf="instituteForm?.get('mobileNumber')?.touched && instituteForm?.get('mobileNumber')?.invalid">
+        Mobile Number is required and must be a 10-digit number.
+      </div>
+ 
+      <label>Telephone:</label>
+      <input type="text" formControlName="telephone" />
+      <div *ngIf="instituteForm?.get('telephone')?.touched && instituteForm?.get('telephone')?.invalid">
+        Telephone is required.
+      </div>
+ 
+      <button type="submit">Submit</button>
+      <button type="button" (click)="instituteForm.reset()">Reset</button>
+
+    </form>
+    <!-- your-component.component.html -->
+<div *ngIf="modalVisible" class="modal">
+  <div class="modal-content">
+    <span class="close-button" (click)="closeModal()">×</span>
+    <p>{{ modalMessage }}</p>
+  </div>
+</div>
+
+  </div>

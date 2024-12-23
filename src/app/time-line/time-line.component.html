@@ -1,0 +1,8 @@
+<div class="timeline-container">
+    <h2>Time Line</h2>
+    <a routerLink="/timeline" class="Time-Line"></a>
+    <div *ngFor="let event of timeline" class="timeline-event">
+        <h3>{{ event.phase }}</h3>
+        <p>{{ event.description }}</p>
+    </div>
+</div>

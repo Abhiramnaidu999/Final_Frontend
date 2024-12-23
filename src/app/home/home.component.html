@@ -1,0 +1,73 @@
+<!-- Main Content Wrapper -->
+<div class="main-content">
+     <!-- Image Carousel and Latest Updates Wrapper -->
+     <div class="carousel-updates-wrapper">
+       <!-- Image Carousel Section -->
+       <section class="image-carousel">
+         <button class="arrow left-arrow" (click)="moveLeft()">❮</button>
+         <div class="carousel-image-container">
+           <img [src]="images[activeIndex]" alt="Carousel Image" class="carousel-image" />
+         </div>
+         <button class="arrow right-arrow" (click)="moveRight()">❯</button>
+       </section>
+   
+       <!-- Latest Updates Section -->
+       <section class="latest-updates">
+         <h2 class="latest-update"><b>Latest Updates</b></h2>
+         <marquee class="updates-marquee" behavior="scroll" direction="up" scrollamount="2">
+           <p class="update-text">Update 1: Scholarship application deadline extended.</p>
+           <p class="update-text">Update 2: New scholarships available for 2024.</p>
+           <p class="update-text">Update 3: Check your application status online.</p>
+           <p class="update-text">NEW: Apply for Merit Scholarship.</p>
+         </marquee>
+        
+       </section>
+     </div>
+     <section class="help">
+     <br/> <br/>
+     <a routerLink="/helps" class="help-link">Help Desk</a>
+</section>
+
+<section class="side-bar">
+     <a routerLink="/scholarship" class="Scholarships offered">Scholarships Offered 🎓</a>
+     <a routerLink="/WhoareEligible" class="Who are Eligible">Who are Eligible✅ </a>
+     <a routerLink="/timeline" class="Time Line">Time Line 🕒</a>
+     <a routerLink="/Reasons" class="Reasons for Rejection">Reasons For Rejection ❌</a>
+</section>
+     
+     <section class="portal-description">
+       <h2>Detailed Description of the Portal</h2>
+       <div class="description-box">
+         <p>
+           The National Scholarship Portal is a one-stop solution for applying, managing, and tracking scholarships offered by various government agencies. Students and institutions can easily access relevant scholarships and ensure transparent disbursement of funds.
+         </p>
+         <p>
+           This portal streamlines the scholarship process and ensures faster, more reliable communication between applicants and the governing bodies. With 24/7 access and dedicated support, NSP enhances education opportunities for everyone.
+         </p>
+       </div>
+     </section>
+   
+
+     <section class="image-descriptions">
+       <div class="image-item">
+         <img src="assets/images/merit.jpg" alt="Merit Scholarship" class="description-image" />
+         <p class="image-text">Merit-based scholarships for outstanding students.</p>
+       </div>
+       <div class="image-item" >
+         <img src="assets/images/post.jpg" alt="Post-Matric Scholarship" class="description-image" />
+         <p class="image-text">Post-matric scholarships for students pursuing higher education.</p>
+       </div>
+       <div class="image-item">
+         <img src="assets/images/pragati.jpg" alt="Pragati Scholarship" class="description-image" />
+         <p class="image-text">Pragati scholarships for girl students.</p>
+       </div>
+     </section>
+   </div>
+   
+   
+   
+   <!-- Footer Section -->
+   <footer class="footer">
+     <p>© 2024 National Scholarship Portal. All rights reserved.</p>
+   </footer>
+   

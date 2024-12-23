@@ -1,0 +1,8 @@
+<!-- help.component.html -->
+<div class="faq-container">
+    <h2>Help Desk - Frequently Asked Questions</h2>
+    <div class="faq" *ngFor="let faq of faqs">
+        <h3>{{ faq.question }}</h3>
+        <p>{{ faq.answer }}</p>
+    </div>
+</div>

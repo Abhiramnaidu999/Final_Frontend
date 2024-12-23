@@ -1,0 +1,53 @@
+.student-login-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .schemes {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+  }
+  
+  .scheme {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%;
+  }
+  
+  .apply-box {
+    background-color: #e6e6e6;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .apply-button {
+    background-color: #004d99;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .apply-button:hover {
+    background-color: #003366;
+  }
+
+  .button{
+    background-color: green;
+    color:white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+  }
+
+  .button:hover{
+    background-color: blue;
+  }
+  

@@ -1,0 +1,10 @@
+<div class="reasons-container">
+    <h2>Reasons For Rejection</h2>
+    <a routerLink="/Reasons" class="Reasons-For-Rejection"></a>
+    <div *ngFor="let reason of reasons" class="reason">
+        <h3>{{ reason.title }}</h3>
+        <p>{{ reason.description }}</p>
+    </div>
+</div>
+
+  

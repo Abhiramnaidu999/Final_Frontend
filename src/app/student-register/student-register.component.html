@@ -1,0 +1,231 @@
+<h1 class="text-center my-4">Student Registration Form</h1>
+<hr>
+<form (ngSubmit)="register()" class="container">
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="firstName">First Name:</label>
+      <input type="text" class="form-control" id="firstName" [(ngModel)]="details.firstName" name="firstName" required>
+    </div>
+    <div class="form-group col-md-6">
+      <label for="lastName">Last Name:</label>
+      <input type="text" class="form-control" id="lastName" [(ngModel)]="details.lastName" name="lastName" required>
+    </div>
+  </div>
+ 
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="dob">Date of Birth:</label>
+      <input type="date" class="form-control" id="dob" [(ngModel)]="details.dob" name="dob" required>
+    </div>
+    <div class="form-group col-md-6">
+      <label for="gender">Gender:</label>
+      <select class="form-control" id="gender" [(ngModel)]="details.gender" name="gender" required>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+  </div>
+ 
+  <div class="form-group">
+    <label for="contact">Contact:</label>
+    <input type="text" class="form-control" id="contact" [(ngModel)]="details.contact" name="contact" required>
+  </div>
+ 
+  <div class="form-group">
+    <label for="email">Email:</label>
+    <input type="email" class="form-control" id="email" [(ngModel)]="details.email" name="email" required>
+  </div>
+ 
+  <div class="form-group">
+    <label for="instCode">Institute Code:</label>
+    <input type="text" class="form-control" id="instCode" [(ngModel)]="details.instCode" name="instCode" required>
+  </div>
+ 
+  <div class="form-group">
+    <label for="accNum">Account Number:</label>
+    <input type="text" class="form-control" id="accNum" [(ngModel)]="details.accNum" name="accNum" required>
+  </div>
+ 
+  <div class="form-group">
+    <label for="adhar">Aadhar Number:</label>
+    <input type="text" class="form-control" id="adhar" [(ngModel)]="details.adhar" name="adhar" required>
+  </div>
+ 
+  <div class="form-group">
+    <label for="ifsc">IFSC Code:</label>
+    <input type="text" class="form-control" id="ifsc" [(ngModel)]="details.ifsc" name="ifsc" required>
+  </div>
+ 
+  <div class="form-group">
+    <label for="bankName">Bank Name:</label>
+    <input type="text" class="form-control" id="bankName" [(ngModel)]="details.bankName" name="bankName" required>
+  </div>
+ 
+  <div class="form-group">
+    <label for="password">Password:</label>
+    <input type="password" class="form-control" id="password" [(ngModel)]="details.password" name="password" required>
+  </div>
+ 
+  <div class="form-group">
+    <label for="caste">Caste:</label>
+    <input type="text" class="form-control" id="caste" [(ngModel)]="details.caste" name="caste" required>
+  </div>
+ 
+  <div class="form-group">
+    <label for="fatherName">Father's Name:</label>
+    <input type="text" class="form-control" id="fatherName" [(ngModel)]="details.fatherName" name="fatherName" required>
+  </div>
+ 
+  <div class="form-group">
+    <label for="motherName">Mother's Name:</label>
+    <input type="text" class="form-control" id="motherName" [(ngModel)]="details.motherName" name="motherName" required>
+  </div>
+ 
+  <div class="form-group">
+    <label for="sscNumber">SSC Number:</label>
+    <input type="text" class="form-control" id="sscNumber" [(ngModel)]="details.sscNumber" name="sscNumber" required>
+  </div>
+ 
+  <div class="form-group">
+    <label for="sscboardName">SSC Board Name:</label>
+    <input type="text" class="form-control" id="sscboardName" [(ngModel)]="details.sscboardName" name="sscboardName" required>
+  </div>
+ 
+  <div class="form-group">
+    <label for="sscpassingyear">SSC Passing Year:</label>
+    <input type="text" class="form-control" id="sscpassingyear" [(ngModel)]="details.sscpassingyear" name="sscpassingyear" required>
+  </div>
+ 
+  <div class="form-group">
+    <label for="sscMarks">SSC Marks:</label>
+    <input type="text" class="form-control" id="sscMarks" [(ngModel)]="details.sscMarks" name="sscMarks" required>
+  </div>
+ 
+  <div class="form-group">
+    <label for="interNumber">Intermediate Number:</label>
+    <input type="text" class="form-control" id="interNumber" [(ngModel)]="details.interNumber" name="interNumber" required>
+  </div>
+ 
+  <div class="form-group">
+    <label for="interboardName">Intermediate Board Name:</label>
+    <input type="text" class="form-control" id="interboardName" [(ngModel)]="details.interboardName" name="interboardName" required>
+  </div>
+ 
+  <div class="form-group">
+    <label for="interpassingyear">Intermediate Passing Year:</label>
+    <input type="text" class="form-control" id="interpassingyear" [(ngModel)]="details.interpassingyear" name="interpassingyear" required>
+  </div>
+ 
+  <div class="form-group">
+    <label for="interMarks">Intermediate Marks:</label>
+    <input type="text" class="form-control" id="interMarks" [(ngModel)]="details.interMarks" name="interMarks" required>
+  </div>
+ 
+  <div class="form-check form-check-inline">
+    <input type="checkbox" class="form-check-input" id="disabled" [(ngModel)]="details.disabled" name="disabled">
+    <label class="form-check-label" for="disabled">Disabled</label>
+  </div>
+ 
+  <div class="form-group">
+    <label for="disabilityType">Disability Type:</label>
+    <input type="text" class="form-control" id="disabilityType" [(ngModel)]="details.disabilityType" name="disabilityType">
+  </div>
+ 
+  <div class="form-group">
+    <label for="maritalStatus">Marital Status:</label>
+    <select class="form-control" id="maritalStatus" [(ngModel)]="details.maritalStatus" name="maritalStatus" required>
+      <option value="single">Single</option>
+      <option value="married">Married</option>
+      <option value="divorced">Divorced</option>
+      <option value="widowed">Widowed</option>
+    </select>
+  </div>
+ 
+  <div class="form-group">
+    <label for="fatherprofession">Father's Profession:</label>
+    <input type="text" class="form-control" id="fatherprofession" [(ngModel)]="details.fatherprofession" name="fatherprofession" required>
+  </div>
+ 
+  <h3 class="mt-4">Address</h3>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="state">State:</label>
+      <input type="text" class="form-control" id="state" [(ngModel)]="details.address.state" name="address.state" required>
+    </div>
+    <div class="form-group col-md-6">
+      <label for="district">District:</label>
+      <input type="text" class="form-control" id="district" [(ngModel)]="details.address.district" name="address.district" required>
+    </div>
+  </div>
+ 
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="houseNumber">House Number:</label>
+      <input type="text" class="form-control" id="houseNumber" [(ngModel)]="details.address.houseNumber" name="address.houseNumber" required>
+    </div>
+    <div class="form-group col-md-6">
+      <label for="street">Street:</label>
+      <input type="text" class="form-control" id="street" [(ngModel)]="details.address.street" name="address.street" required>
+    </div>
+  </div>
+ 
+  <div class="form-group">
+    <label for="pincode">Pincode:</label>
+    <input type="number" class="form-control" id="pincode" [(ngModel)]="details.address.pincode" name="address.pincode" required>
+  </div>
+ 
+  <h3 class="mt-4">Upload Documents</h3>
+  <div class="form-group">
+    <label for="aadhar">Aadhar:</label>
+    <input type="file" class="form-control-file" id="aadhar" (change)="onFileChange($event, 'Aadhar')" required>
+  </div>
+ 
+  <div class="form-group">
+    <label for="photograph">Photograph:</label>
+    <input type="file" class="form-control-file" id="photograph" (change)="onFileChange($event, 'photograph')" required>
+  </div>
+ 
+  <div class="form-group">
+    <label for="idCard">ID Card:</label>
+    <input type="file" class="form-control-file" id="idCard" (change)="onFileChange($event, 'idCard')" required>
+  </div>
+ 
+  <div class="form-group">
+    <label for="casteCertificate">Caste Certificate:</label>
+    <input type="file" class="form-control-file" id="casteCertificate" (change)="onFileChange($event, 'casteCertificate')" required>
+  </div>
+ 
+  <div class="form-group">
+    <label for="incomeCertificate">Income Certificate:</label>
+    <input type="file" class="form-control-file" id="incomeCertificate" (change)="onFileChange($event, 'incomeCertificate')" required>
+  </div>
+ 
+  <div class="form-group">
+    <label for="bankpassbook">Bank Passbook:</label>
+    <input type="file" class="form-control-file" id="bankpassbook" (change)="onFileChange($event, 'Bankpassbook')" required>
+  </div>
+ 
+  <div class="form-group">
+    <label for="sscMarksheet">SSC Marksheet:</label>
+    <input type="file" class="form-control-file" id="sscMarksheet" (change)="onFileChange($event, 'SSCmarksheet')" required>
+  </div>
+ 
+  <div class="form-group">
+    <label for="intermediateMarksheet">Intermediate Marksheet:</label>
+    <input type="file" class="form-control-file" id="intermediateMarksheet" (change)="onFileChange($event, 'Intermediatemarksheet')" required>
+  </div>
+ 
+  <div class="d-flex justify-content-between">
+    <button (click)=" register()" type="submit" class="btn btn-primary">Register</button>
+    <button type="reset" class="btn btn-secondary ml-2" (click)="resetForm()">Reset</button>
+  </div>
+</form>
+<!-- your-component.component.html -->
+<div *ngIf="modalVisible" class="modal">
+  <div class="modal-content">
+    <span class="close-button" (click)="closeModal()">×</span>
+    <p>{{ modalMessage }}</p>
+  </div>
+</div>
+

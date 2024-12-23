@@ -1,0 +1,305 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+   
+  .container {
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+   
+  .title {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+   
+  /* Header Styles */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4CAF50;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+  }
+   
+  .home-link {
+    font-size: 18px;
+    font-weight: bold;
+  }
+   
+  .logout-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+  }
+   
+  .logout-btn:hover {
+    background-color: #d32f2f;
+  }
+   
+  /* Content and Panel Styles */
+  .content {
+    display: flex;
+    margin-top: 20px;
+  }
+   
+  .left-panel {
+    width: 20%;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border-right: 1px solid #ddd;
+    border-radius: 5px;
+  }
+   
+  .view-btn{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color:#ffa8b6;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: left;
+    border-radius: 5px;
+  }
+   .accept-btn, .reject-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: left;
+    border-radius: 5px;
+  }
+   
+  .view-btn:hover, .accept-btn:hover, .reject-btn:hover {
+    /* background-color: #45a049; */
+  }
+   
+  .accept-btn {
+    /* background-color: #4CAF50; */
+  }
+   
+  .reject-btn {
+    /* background-color: #f44336; */
+  }
+   
+  .reject-btn:hover {
+    /* background-color: #d32f2f; */
+  }
+   
+  /* Institute List Styles */
+  .institute-list {
+    width: 80%;
+    padding: 10px;
+  }
+   
+  .institute-item {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  .institute-item p{
+    margin-left: auto;
+    margin-right: auto;
+  }
+   
+  .institute-item a {
+    color: #4CAF50;
+    text-decoration: none;
+  }
+   
+  .institute-item a:hover {
+    text-decoration: underline;
+  }
+   
+  /* Institute Details Styles */
+  .institute-details {
+    margin-top: 20px;
+  }
+   
+  .institute-details table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+   
+  .institute-details th, .institute-details td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+   
+  .institute-details th {
+    background-color: #f2f2f2;
+  }
+   
+  /* Modal Styles */
+  .modal {
+    display: block; /* Show the modal */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+   
+  .modal-content {
+    background-color: #fefefe;
+    margin: 10% auto; /* 10% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    animation: fadeIn 0.3s;
+    border-radius: 10px;
+  }
+   
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+   
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+   
+  /* Animation for Modal */
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  button {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 14px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+  
+  button a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  button:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+  }
+  
+  button:active {
+    background: #004494;
+    transform: scale(0.95);
+  }
+  
+  button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+  }
+  
+  @media (max-width: 600px) {
+    button {
+      width: 100%;
+      padding: 15px;
+      font-size: 1.2em;
+    }
+  }
+  .institute-item {
+    background: #fff;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .institute-item a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .institute-item a:hover {
+    text-decoration: underline;
+  }
+  
+  button {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    margin: 5px 0;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+  
+  button.view-btn {
+    background: #A0E2DB;
+  }
+  
+  button.accept-btn {
+    background: #8458b3;
+  }
+  
+  button.reject-btn {
+    background: #7b4f53;
+  }
+  
+  button:hover {
+    transform: scale(1.05);
+  }
+  
+  button:active {
+    transform: scale(0.95);
+  }
+  
+  button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+  }
+  
+  @media (max-width: 600px) {
+    .institute-item {
+      padding: 15px;
+    }
+  
+    button {
+      width: 100%;
+      padding: 15px;
+      font-size: 1.2em;
+    }
+  }
+   
