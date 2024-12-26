@@ -13,15 +13,18 @@ export class ScholarshipsOfferedComponent {
     scholarships = [
       {
         title: 'Merit-based Scholarship',
-        description: 'Scholarships awarded to students based on academic excellence and achievements.'
+        description: 'Scholarships awarded to students based on academic excellence and achievements.',
+        amount: '₹50,000 per year'
       },
       {
         title: 'Post-Matric Scholarship',
-        description: 'Scholarships for students pursuing higher education after matriculation.'
+        description: 'Scholarships for students pursuing higher education after matriculation.',
+        amount: '₹30,000 per year'
       },
       {
         title: 'Pragati Scholarship',
-        description: 'Scholarships specifically for girl students to promote higher education among women.'
+        description: 'Scholarships specifically for girl students to promote higher education among women.',
+        amount: '₹40,000 per year'
       }
     ];
   

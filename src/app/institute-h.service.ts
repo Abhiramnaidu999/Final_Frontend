@@ -7,7 +7,6 @@ import { Observable } from 'rxjs';
 })
 export class InstituteHService {
 
-
   private baseUrl = 'http://localhost:8092/api/registration';
   private apiUrl = 'http://localhost:8084/api';
  
@@ -37,5 +36,9 @@ export class InstituteHService {
     console.log(`Deleting student with Aadhar: ${adhar}`);
     return this.http.delete(`${this.baseUrl}/student/${adhar}`, { responseType: 'text' });
   }
- 
+
+  updateApplicationStatus(adhar: string, status: string): Observable<any> {
+    console.log(`Updating application status for Aadhar: ${adhar} to ${status}`);
+    return this.http.post<any>(`${this.baseUrl}/students/${adhar}/status`, { status });
+  }
 }

@@ -199,27 +199,36 @@ rejectInstitute(code: string): void {
   acceptApplication(aadhar: string): void {
     const application = this.studentApplications.find(app => app.aadharNumber === aadhar);
     if (application) {
-        // Check if the application is already accepted in local storage
-        let acceptedApplications = JSON.parse(localStorage.getItem('acceptedApplications') || '[]');
-        const isAlreadyAccepted = acceptedApplications.includes(aadhar);
- 
-        if (isAlreadyAccepted) {
-            this.showModal("Already accepted");
-        } else {
+      // Check if the application is already accepted in local storage
+      let acceptedApplications = JSON.parse(localStorage.getItem('acceptedApplications') || '[]');
+      const isAlreadyAccepted = acceptedApplications.includes(aadhar);
+  
+      if (isAlreadyAccepted) {
+        this.showModal("Already accepted");
+      } else {
+        this.stateNodalService.updateApplicationStatus(aadhar, 'Accepted').subscribe(
+          () => {
             application.isAccepted = true;
             console.log(`Application with Aadhar number ${aadhar} accepted.`);
             this.showModal("Application accepted by state, sent to ministry");
- 
+  
             // Store the acceptance status in local storage
             acceptedApplications.push(aadhar);
             localStorage.setItem('acceptedApplications', JSON.stringify(acceptedApplications));
-        }
+          },
+          (error: any) => {
+            console.error(`Error updating application status for Aadhar ${aadhar}:`, error);
+            this.showModal("An error occurred while accepting the application. Please try again later.");
+          }
+        );
+      }
     } else {
-        console.error(`Application with Aadhar number ${aadhar} not found.`);
-        this.showModal("Application not found. Please check the Aadhar number and try again.");
+      console.error(`Application with Aadhar number ${aadhar} not found.`);
+      this.showModal("Application not found. Please check the Aadhar number and try again.");
     }
-}
- 
+  }
+  
+
   showModal(message: string) {
     this.modalMessage = message;
     this.modalVisible = true;

@@ -72,15 +72,15 @@
     <label for="scheme">Scheme:</label>
     <select id="scheme" [(ngModel)]="studentApplication.scheme" name="scheme" required>
       <option value="" disabled selected>Select Scheme</option>
-      <option value="National Merit Scholarship">National Merit Scholarship</option>
-      <option value="PRAGATI SCHOLARSHIP">PRAGATI SCHOLARSHIP</option>
-      <option value="POST MATRIC SCHOLARSHIP">POST MATRIC SCHOLARSHIP</option>
+      <option value="National Merit Scholarship ">National Merit Scholarship-₹50,000 per year</option>
+      <option value="PRAGATI SCHOLARSHIP">PRAGATI SCHOLARSHIP-₹30,000 per year</option>
+      <option value="POST MATRIC SCHOLARSHIP">POST MATRIC SCHOLARSHIP-₹40,000 per year</option>
     </select>
     <div *ngIf="scholarshipForm.submitted && !scholarshipForm.controls['scheme']?.valid" class="error">
       Scheme is required.
     </div>
   </div>
-  <button type="submit">Submit</button>
+  <button type="submit">Submit</button>&nbsp;
   <button type="button" (click)="resetForm(scholarshipForm)">Reset</button>
 </form>
 

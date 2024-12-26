@@ -2,13 +2,14 @@
 <hr>
 <form *ngIf="!forgotPassword" (ngSubmit)="login()" #loginForm="ngForm">
   <div class="form-group">
-    <label for="email">Email:</label>
-    <input type="email" id="email" [(ngModel)]="credentials.email" name="email" required email>
-    <div *ngIf="loginForm.submitted && loginForm.controls['email'].errors">
-      <small *ngIf="loginForm.controls['email'].errors['required']">Email is required.</small>
-      <small *ngIf="loginForm.controls['email'].errors['email']">Invalid email format.</small>
+    <label for="adhar">Adhar:</label>
+    <input type="text" id="adhar" [(ngModel)]="credentials.adhar" name="adhar" required>
+    <div *ngIf="loginForm.submitted && loginForm.controls['adhar'].errors">
+      <small *ngIf="loginForm.controls['adhar'].errors['required']">Adhar is required.</small>
     </div>
   </div>
+
+
 
   <div class="form-group">
     <label for="password">Password:</label>

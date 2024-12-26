@@ -1,18 +1,25 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ScholarshipFormComponent } from '../scholarship-form/scholarship-form.component';
-import { RouterLink } from '@angular/router';
+import { RouterLink, ActivatedRoute } from '@angular/router';
+import { StudentLService } from '../student-l.service';
+import { ChangeDetectorRef } from '@angular/core';
 
 @Component({
   selector: 'app-student-home',
   standalone: true,
-  imports: [CommonModule,ScholarshipFormComponent,RouterLink],
+  imports: [CommonModule, ScholarshipFormComponent, RouterLink],
   templateUrl: './student-home.component.html',
-  styleUrl: './student-home.component.css'
+  styleUrls: ['./student-home.component.css']
 })
-export class StudentHomeComponent {
+export class StudentHomeComponent implements OnInit {
+  showForm = false;
+  adhar: string = '';
+  studentStatus: string = '';
 
-  showForm = false; 
+  studentStatu: string = '';
+  studentStat: string = '';
+
   schemes = [
     {
       title: 'Merit-based Scholarship',
@@ -27,8 +34,50 @@ export class StudentHomeComponent {
       description: 'Scholarships for girl students to promote education.'
     }
   ];
-  toggleForm() {
-    this.showForm = !this.showForm; // Add this method
+
+  constructor(private route: ActivatedRoute, private studentService: StudentLService, private cdr: ChangeDetectorRef) {}
+
+  ngOnInit(): void {
+    this.route.paramMap.subscribe(params => {
+      this.adhar = params.get('adhar')!;
+
+      this.fetchStudentDetails(this.adhar);
+
+      this.fetchStudentDetail(this.adhar);
+
+      this.fetchStudentDetai(this.adhar);
+    });
   }
 
+  toggleForm() {
+    this.showForm = !this.showForm;
+  }
+
+  fetchStudentDetails(adhar: string): void {
+    this.studentService.getStudentDetailsByAdhar(adhar).subscribe(response => {
+      this.studentStatus = response.status;
+    });
+  }
+
+  fetchStudentDetail(adhar: string): void {
+    this.studentService.getStudentStatusByAadhars(adhar).subscribe(response => {
+      this.studentStatu = response.status;
+    });
+  }
+
+  fetchStudentDetai(aadhar: string): void {
+    this.studentService.getStudentStatusByAadhar(aadhar).subscribe(response => {
+      console.log(response); // Check the response
+      this.studentStat = response.statusM;
+      this.cdr.detectChanges(); 
+    });
+  }
+  
+
+
+
 }
+
+
+  
+

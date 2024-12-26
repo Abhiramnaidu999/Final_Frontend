@@ -32,7 +32,8 @@ export class StudentLoginComponent {
         this.modalVisible = true;
         setTimeout(() => {
           this.modalVisible = false;
-          this.router.navigate(['/studentH']);
+          const adhar = this.credentials.adhar; // Get the adhar number from the credentials
+          this.router.navigate(['/studentH', adhar]); // Navigate to the student's homepage with adhar number
         }, 2000);
       },
       error => {
@@ -42,7 +43,7 @@ export class StudentLoginComponent {
       }
     );
   }
-
+  
   showForgotPasswordForm() {
     this.forgotPassword = true;
   }

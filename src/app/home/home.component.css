@@ -1,439 +1,445 @@
+ 
 /* General Styling */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
 }
 
 /* Header Section Styling */
 .header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #4CAF50;
-    color: white;
-    padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #4CAF50;
+  color: white;
+  padding: 20px;
 }
 
-header-content {
-    display: flex;
-    align-items: center;
-    gap: 30px;
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 30px;
 }
 
 .header img.logo {
-    height: 80px;
+  height: 80px;
 }
 
 .header h1 {
-    font-size: 1.8rem;
-    margin: 0;
-    text-align: center;
+  font-size: 1.8rem;
+  margin: 0;
+  text-align: center;
 }
 
 /* Image Carousel Section */
 .image-carousel {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    width: 100%;
-    height: 70vh;
-    background-color: #fff;
-    overflow: hidden;
-    margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  background-color: #fff;
+  overflow: hidden;
+  margin-top: 20px;
 }
 
 .carousel-image-container {
-    width: 600px;
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+  width: 600px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
 .carousel-item {
-    display: none;
-    flex-direction: column;
-    align-items: center;
+  display: none;
+  flex-direction: column;
+  align-items: center;
 }
 
 .carousel-item.active {
-    display: flex;
+  display: flex;
 }
 
 .carousel-image {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    position: relative;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  position: relative;
 }
 
 .arrow {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 15px;
-    font-size: 2rem;
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
-    backdrop-filter: blur(5px); /* Add blur effect */
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 15px;
+  font-size: 2rem;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  backdrop-filter: blur(5px); /* Add blur effect */
 }
 
 .left-arrow {
-    left: 310px; /* Position on the left edge of the image */
+  left: 290px; /* Adjusted for better responsiveness */
 }
 
 .right-arrow {
-    right: 310px; /* Position on the right edge of the image */
+  right: 290px; /* Adjusted for better responsiveness */
 }
 
 .arrow:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* Portal Description Section */
 .portal-description {
-    text-align: center;
-    padding: 30px 20px;
-    background-color: #fff;
+  text-align: center;
+  padding: 30px 20px;
+  background-color: #fff;
 }
 
 .portal-description h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #333;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
 }
 
 /* Images with Descriptions Section */
 .image-descriptions {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 20px;
-    background-color: #fff;
-    margin-top: 20px;
-    
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  margin-top: 20px;
+  flex-wrap: wrap; /* Added for responsiveness */
 }
 
 .image-item {
-    text-align: center;
-    max-width: 30%;
+  text-align: center;
+  max-width: 30%;
+  margin-bottom: 20px; /* Added for spacing */
 }
 
 .description-image {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
+
 .image-text {
-    margin-top: 10px;
-    font-size: 1rem;
-    color: #555;
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #555;
 }
 
 .description-box {
-    background-color: #d0bdf4;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 80%;
-    max-width: 900px;
-    margin: 0 auto;
+  background-color: #d0bdf4;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .description-box p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    color:black;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: black;
 }
 
 /* Latest Updates Section */
 .latest-updates {
-    width: 20%;
-    background-color: #f9f9f9;
-    padding: 10px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-    position: absolute;
-    left: 2%; /* Adjusted position to move slightly left */
-    top: 38%; /* Adjusted position to be higher */
-    transform: translateY(-50%);
-    background-color: #fff685;
-    counter-reset: #797676;
-    
+  width: 20%;
+  background-color: #f9f9f9;
+  padding: 10px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  left: 2%; /* Adjusted position to move slightly left */
+  top: 43%; /* Adjusted position to be higher */
+  transform: translateY(-50%);
+  background-color: #fff685;
+  counter-reset: #797676;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  z-index: 1; /* Ensure it stays above other elements */
 }
+
 .latest-update {
-    font-size: 2em; /* Adjust the size as needed */
-  }
-  
+  font-size: 2em; /* Adjust the size as needed */
+}
+
 .latest-updates:hover {
-    transform: translateY(-50%) scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-50%) scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
-
-.help {
-    width: 20%;
-    background-color: #f9f9f9;
-    padding: 10px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-    position: absolute;
-    left: 2%;
-    top: 75%;
-    transform: translateY(-50%);
-    overflow: hidden; /* Ensure the stars stay within the help desk */
-    border-radius: 10px;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    background-color: #A0E2DB;
-}
-
-.help:hover {
-    transform: translateY(-50%) scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-
-.stars {
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-
-.star {
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    background-color: #ff0000;
-    border-radius: 50%;
-    animation: moveStar 5s infinite alternate, changeColor 1s infinite alternate;
-}
-
-@keyframes moveStar {
-    0% {
-        top: 0;
-        left: 0;
-    }
-    25% {
-        top: 0;
-        left: 100%;
-    }
-    50% {
-        top: 100%;
-        left: 100%;
-    }
-    75% {
-        top: 100%;
-        left: 0;
-    }
-    100% {
-        top: 0;
-        left: 0;
-    }
-}
-
-@keyframes changeColor {
-    0% {
-        background-color: #ff0000;
-    }
-    100% {
-        background-color: #0000ff;
-    }
-}
-
-.help a {
-    display: block;
-    margin-left: 10%;
-    width: 60%;
-    text-align: center;
-    margin-bottom: 15%;
-    color: #000;
-    text-decoration: none;
-    background-color: #f1f1f1;
-    border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s, transform 0.3s;
-}
-
-.help a:hover {
-    background-color: #FF6F61;
-    color: #ffffff;
-    transform: scale(1.05);
-}
-
-
-
-
-.side-bar {
-    width: 20%;
-    background-color: #f9f9f9;
-    padding: 22px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-    position: absolute;
-    left: 76%; /* Adjusted position to move slightly left */
-    top: 49%; /* Adjusted position to be higher */
-    transform: translateY(-50%);
-    border-radius: 10px;
-    text-align: center;
-    background-color: #fbe3e8;
-  }
-  
-  .side-bar a {
-    display: block;
-    color: #333;
-    text-decoration: none;
-    padding: 10px 15px;
-    margin: 10px 0;
-    border-radius: 5px;
-    transition: background 0.3s, transform 0.3s;
-    font-size: 1.1em;
-    white-space: nowrap; /* Prevents text from wrapping */
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  
-  .side-bar a:hover {
-    background: rgba(0, 0, 0, 0.1);
-    transform: translateX(10px);
-  }
-  
-  .side-bar a.scholarships-offered::before {
-    content: "🎓";
-    margin-right: 10px;
-  }
-  
-  .side-bar a.who-are-eligible::before {
-    content: "✅";
-    margin-right: 10px;
-  }
-  
-  .side-bar a.timeline::before {
-    content: "🕒";
-    margin-right: 10px;
-  }
-  
-  .side-bar a.reasons-for-rejection::before {
-    content: "❌";
-    margin-right: 10px;
-  }
-  
-  
-
-
-
 
 .latest-updates h2 {
-    font-size: 1.5rem;
-    color: #333;
-    text-align: center;
-    margin-bottom: 10px;
+  font-size: 1.5rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 .updates-marquee {
-    font-size: 1rem;
-    color: #333;
-    background-color: #fff;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
+  font-size: 1rem;
+  color: #333;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 150px;
 }
 
 .update-text {
-    animation: blink 1s step-end infinite alternate;
+  animation: blink 1s step-end infinite alternate;
 }
 
 @keyframes blink {
-    0% { color: red; }
-    25% { color: blue; }
-    50% { color: green; }
-    75% { color: orange; }
-    100% { color: purple; }
+  0% { color: red; }
+  25% { color: blue; }
+  50% { color: green; }
+  75% { color: orange; }
+  100% { color: purple; }
+}
+
+/* Help Desk Section */
+.help {
+  width: 20%;
+  height:100px;
+  background-color: #f9f9f9;
+  padding: 10px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  left: 2%;
+  top: 79%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-50%);
+  overflow: hidden; /* Ensure the stars stay within the help desk */
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  background-color: #A0E2DB;
+}
+
+.help:hover {
+  transform: translateY(-50%) scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.help a {
+  display: block;
+  margin: 10px auto; /* Center the links */
+  width: 80%; /* Adjust width for better spacing */
+  text-align: center;
+  color: #000;
+  text-decoration: none;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  padding: 10px; /* Add padding for better touch targets */
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.help a:hover {
+  background-color: #FF6F61;
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+/* Sidebar Section */
+.side-bar {
+  width: 20%;
+  background-color: #f9f9f9;
+  padding: 22px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  left: 78%; /* Adjusted position to move slightly left */
+  top: 49%; /* Adjusted position to be higher */
+  transform: translateY(-50%);
+  border-radius: 10px;
+  text-align: center;
+  background-color: #fbe3e8;
+}
+
+.side-bar a {
+  display: block;
+  color: #333;
+  text-decoration: none;
+  padding: 10px 15px;
+  margin: 10px 0;
+  border-radius: 5px;
+  transition: background 0.3s, transform 0.3s;
+  font-size: 1.1em;
+  white-space: nowrap; /* Prevents text from wrapping */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.side-bar a:hover {
+  background: rgba(0, 0, 0, 0.1);
+  transform: translateX(10px);
+}
+
+.side-bar a.scholarships-offered::before {
+  content: "🎓";
+  margin-right: 10px;
+}
+
+.side-bar a.who-are-eligible::before {
+  content: "✅";
+  margin-right: 10px;
+}
+
+.side-bar a.timeline::before {
+  content: "🕒";
+  margin-right: 10px;
+}
+
+.side-bar a.reasons-for-rejection::before {
+  content: "❌";
+  margin-right: 10px;
 }
 
 /* Footer Section */
 .footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 15px 0;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
 }
+
 /* Responsive Design */
 @media (max-width: 1200px) {
-    .navbar-container {
-      width: 100%;
-      padding: 0 10px;
-    }
-    .main-content {
-      padding: 10px;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .navbar-menu {
-      flex-direction: column;
-      align-items: center;
-    }
-    .navbar-menu li {
-      margin-left: 0;
-      margin-top: 10px;
-    }
-    .carousel-updates-wrapper {
-      flex-direction: column;
-    }
-    .image-carousel, .latest-updates {
-      margin: 10px 0;
-    }
-    .help {
-      margin: 10px 0;
-    }
-    .side-bar {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    .side-bar a {
-      margin: 5px 0;
-    }
-    .portal-description {
-      text-align: center;
-    }
-    .image-descriptions {
-      flex-direction: column;
-      align-items: center;
-    }
-    .image-item {
-      margin: 10px 0;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .navbar-brand {
-      font-size: 20px;
-    }
-    .navbar img {
-      height: 40px;
-    }
-    .navbar-menu a {
-      font-size: 14px;
-    }
-    .latest-update {
-      font-size: 1.5em;
-    }
-    .updates-marquee {
-      height: 150px;
-    }
-    .help-link {
-      font-size: 14px;
-    }
-    .footer p {
-      font-size: 12px;
-    }
-  }
-  
+.navbar-container {
+    width: 100%;
+    padding: 0 10px;
+}
+.main-content {
+    padding: 10px;
+}
+}
+
+@media (max-width: 768px) {
+.navbar-menu {
+    flex-direction: column;
+    align-items: center;
+}
+.navbar-menu li {
+    margin-left: 0;
+    margin-top: 10px;
+}
+.carousel-updates-wrapper {
+    flex-direction: column;
+}
+.image-carousel, .latest-updates {
+    margin: 10px 0;
+    width: 100%; /* Ensure full width on smaller screens */
+}
+.help {
+    margin: 10px 0;
+    width: 100%; /* Ensure full width on smaller screens */
+    position: static; /* Remove absolute positioning */
+    transform: none; /* Remove transform */
+}
+.side-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Ensure full width on smaller screens */
+    position: static; /* Remove absolute positioning */
+    transform: none; /* Remove transform */
+}
+.side-bar a {
+    margin: 5px 0;
+}
+.portal-description {
+    text-align: center;
+}
+.image-descriptions {
+    flex-direction: column;
+    align-items: center;
+}
+.image-item {
+    margin: 10px 0;
+    width: 100%; /* Ensure full width on smaller screens */
+}
+.latest-updates {
+  width: 100%; /* Ensure full width on smaller screens */
+  position: static; /* Remove absolute positioning */
+  transform: none; /* Remove transform */
+  margin: 10px 0; /* Add margin for spacing */
+}
+
+.latest-update {
+  font-size: 1.5em; /* Adjust font size for smaller screens */
+}
+
+.updates-marquee {
+  height: 100px; /* Adjust height for smaller screens */
+}
+.arrow {
+  padding: 10px;
+  font-size: 1.5rem;
+}
+
+.left-arrow {
+  left: 5px; /* Adjust for smaller screens */
+}
+
+.right-arrow {
+  right: 5px; /* Adjust for smaller screens */
+}
+
+
+}
+
+@media (max-width: 480px) {
+.navbar-brand {
+    font-size: 20px;
+}
+.navbar img {
+    height: 40px;
+}
+.navbar-menu a {
+    font-size: 14px;
+}
+.latest-update {
+    font-size: 1.2em; /* Adjust font size for smaller screens */
+   
+}
+
+.updates-marquee {
+    height: 120px; /* Adjust height for smaller screens */
+}
+.help-link {
+    font-size: 14px;
+}
+.footer p {
+    font-size: 12px;
+}
+.arrow {
+  padding: 8px;
+  font-size: 1.2rem;
+}
+
+.left-arrow {
+  left: 3px; /* Adjust for very small screens */
+}
+
+.right-arrow {
+  right: 3px; /* Adjust for very small screens */
+}
+}
+

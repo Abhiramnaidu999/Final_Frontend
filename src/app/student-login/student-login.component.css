@@ -5,17 +5,17 @@ body {
   padding: 0;
   background-color: #f4f4f4;
 }
-
+ 
 h1 {
   font-size: 2em;
   color: #333;
   text-align: center;
 }
-
+ 
 hr {
   margin: 20px 0;
 }
-
+ 
 form {
   max-width: 400px;
   margin: 0 auto;
@@ -24,45 +24,46 @@ form {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
 }
-
+ 
 .form-group {
   margin-bottom: 15px;
 }
-
+ 
 .form-group label {
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
 }
-
+ 
 .form-group input {
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
-
+ 
 button[type="submit"],
 button[type="button"] {
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color: rgb(26, 26, 110);
   color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  width:100%;
   font-size: 1em;
   margin-top: 10px;
 }
-
+ 
 button[type="submit"]:hover,
 button[type="button"]:hover {
-  background-color: #0056b3;
+  background-color: rgb(26, 26, 110);
 }
-
+ 
 small {
   color: red;
 }
-
+ 
 /* Modal Styles */
 .modal {
   display: flex;
@@ -75,7 +76,7 @@ small {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
 }
-
+ 
 .modal-content {
   background-color: #fff;
   padding: 20px;
@@ -83,7 +84,7 @@ small {
   text-align: center;
   position: relative;
 }
-
+ 
 .modal-content .close {
   position: absolute;
   top: 10px;
@@ -91,7 +92,9 @@ small {
   font-size: 1.5em;
   cursor: pointer;
 }
-
+ 
 .modal-content p {
   margin: 0;
 }
+ 
+ 

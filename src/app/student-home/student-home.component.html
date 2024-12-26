@@ -1,7 +1,6 @@
 <div class="student-home-container">
-    <h2>Student Home</h2>
-  
-    <!-- Schemes Section -->
+  <div *ngIf="adhar">
+    <h1>Welcome, Student with Adhar: {{ adhar }}</h1>
     <div class="schemes-container">
       <a routerLink="/student-home" class="student-home"></a>
       <div *ngFor="let scheme of schemes">
@@ -9,21 +8,26 @@
         <p>{{ scheme.description }}</p>
       </div>
     </div>
-  
+
     <!-- Apply for Schemes Box -->
     <div class="apply-box">
       <h3>Apply for Schemes</h3>
       <p>Click below to apply for the available schemes.</p>
-       
-
-      <!-- <ul>
-        <li><a routerLink="/apply-scholarship">Apply Now</a></li>
-      </ul> -->
       <button routerLink="/apply-scholarship" class="button">Apply Now</button>
-
-      
-
-
     </div>
   </div>
-  
+
+  <!-- New Boxes on the Right Side -->
+  <div class="right-side-boxes">
+    <h2>Application Status</h2>
+    <div class="box">
+      <h3>Institute: {{ studentStatus || 'Pending' }}</h3>
+    </div>
+    <div class="box">
+      <h3>State : {{ studentStatu || 'Pending' }}</h3>
+    </div>
+    <div class="box">
+      <h3>Ministry : {{ studentStat || 'Pending' }}</h3>
+    </div>
+  </div>
+</div>

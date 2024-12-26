@@ -22,6 +22,7 @@ import { RegisterSuccessComponent } from './register-success/register-success.co
 import { NodalLoginComponent } from './nodal-login/nodal-login.component';
 import { NodalHomeComponent } from './nodal-home/nodal-home.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
+import { TermsComponent } from './terms/terms.component';
 
 
 
@@ -44,14 +45,15 @@ export const routes: Routes = [
   {path:'contact-us',component:ContactUsComponent},
   {path:'studentL',component:StudentLoginComponent},
   {path:'studentR',component:StudentRegisterComponent},
-  {path:'studentH',component:StudentHomeComponent},
+  { path: 'studentH/:adhar', component: StudentHomeComponent},
   {path:'instituteL',component:InstituteLoginComponent},
   {path:'instituteR',component:InstituteRegisterComponent},
   {path:'instituteH/:instituteCode',component:InstituteHomeComponent},
   {path:'register-success',component:RegisterSuccessComponent},
   {path:'nodal',component:NodalLoginComponent},
   {path:'nodalH',component:NodalHomeComponent},
-  {path:'privacypolicy',component:PrivacyPolicyComponent}
+  {path:'privacypolicy',component:PrivacyPolicyComponent},
+  {path:'terms',component:TermsComponent}
 
 
 ];

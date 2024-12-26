@@ -55,4 +55,9 @@ export class NodalHService {
   deleteStudentApplication(aadharNumber: string): Observable<void> {
     return this.http.delete<void>(`${this.baseUrl}/student/${aadharNumber}`);
   }
+
+  updateApplicationStatus(aadhar: string, status: string): Observable<void> {
+    return this.http.post<void>(`${this.baseUrl}/student/${aadhar}/status`, { status });
+  }
+  
 }

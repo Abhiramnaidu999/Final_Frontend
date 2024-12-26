@@ -16,4 +16,10 @@ export class StudentApplicationService {
   deleteStudentApplication(aadharNumber: String): Observable<void> {
     return this.http.delete<void>(`${this.apiUrl}/student/{aadharNumber}`);
   }
+
+
+
+  updateApplicationStatus(aadhar: string, statusM: string): Observable<any> {
+    return this.http.post<any>(`${this.apiUrl}/student/${aadhar}/statusM`, { statusM });
+  }
 }

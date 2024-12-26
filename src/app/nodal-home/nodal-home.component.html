@@ -12,7 +12,12 @@
     <div *ngIf="isInstituteListVisible" class="institute-list">
       <h4>Institute Applications</h4>
       <div *ngFor="let institute of institutes" class="institute-item">
-        <p><b>Name:</b> <b style="color:blue;">{{ institute.name }}</b>&nbsp;&nbsp;<b>Code: </b> <a href="#" (click)="fetchInstituteDetails(institute.code)"><b style="color: blue;">{{ institute.code }}</b></a></p>
+        <!-- <p><b>Name:</b> <b style="color:blue;">{{ institute.name }}</b>&nbsp;&nbsp;<b>Code: </b> <a href="#" (click)="fetchInstituteDetails(institute.code)"><b style="color: blue;">{{ institute.code }}</b></a></p> -->
+        <p>
+          <span class="name"><b>Name:</b> <b style="color:blue;">{{ institute.name }}</b></span>
+          <br>
+          <span class="code"><b>Code: </b> <a href="#" (click)="fetchInstituteDetails(institute.code)"><b style="color: blue;">{{ institute.code }}</b></a></span>
+        </p>
         <button class="view-btn" (click)="viewInstituteDetails(institute.code)">View</button>
         <button class="accept-btn" (click)="acceptInstitute(institute.code)">Accept</button>
         <button class="reject-btn" (click)="rejectInstitute(institute.code)">Reject</button>

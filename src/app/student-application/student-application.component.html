@@ -1,9 +1,8 @@
 <div *ngIf="studentApplications.length > 0; else noData">
-  
   <table>
     <thead>
       <tr>
-        <th>ID</th>
+       
         <th>Aadhar Number</th>
         <th>Institute Code</th>
         <th>Institute Name</th>
@@ -19,7 +18,7 @@
     </thead>
     <tbody>
       <tr *ngFor="let application of studentApplications">
-        <td>{{ application.applicatinId }}</td>
+        
         <td>{{ application.aadharNumber }}</td>
         <td>{{ application.instituteCode }}</td>
         <td>{{ application.instituteName }}</td>
@@ -31,8 +30,8 @@
         <td>{{ application.tuitionFee }}</td>
         <td>{{ application.scheme }}</td>
         <td>
-          <button (click)="acceptApplication(application.applicatinId)">Accept</button><br><br>
-          <button (click)="rejectApplication(application.aadharNumber)">Reject</button>
+          <button (click)="acceptApplication(application.aadharNumber)" aria-label="Accept Application">Accept</button><br><br>
+          <button (click)="rejectApplication(application.aadharNumber)" aria-label="Reject Application">Reject</button>
         </td>
       </tr>
     </tbody>
@@ -45,17 +44,17 @@
 <!-- Confirmation Modal -->
 <div *ngIf="confirmRejectApplication" class="modal">
   <div class="modal-content">
-    <span class="close" (click)="cancelReject()">×</span>
+    <span class="close" (click)="cancelReject()" aria-label="Close Modal">×</span>
     <p>Are you sure you want to reject this application?</p>
-    <button (click)="confirmReject()">Yes</button> &nbsp;
-    <button (click)="cancelReject()">No</button>
+    <button (click)="confirmReject()" aria-label="Confirm Reject">Yes</button>  
+    <button (click)="cancelReject()" aria-label="Cancel Reject">No</button>
   </div>
 </div>
 
 <!-- Message Modal -->
 <div *ngIf="modalVisible" class="modal">
   <div class="modal-content">
-    <span class="close" (click)="closeModal()">×</span>
+    <span class="close" (click)="closeModal()" aria-label="Close Modal">×</span>
     <p>{{ modalMessage }}</p>
   </div>
 </div>
