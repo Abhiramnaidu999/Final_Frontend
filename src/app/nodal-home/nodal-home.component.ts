@@ -4,6 +4,7 @@ import { CommonModule } from "@angular/common";
 import { HttpErrorResponse } from "@angular/common/http";
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { RouterLink } from '@angular/router';
+import { catchError,of } from 'rxjs';
  
  
  
@@ -93,7 +94,15 @@ export class NodalHomeComponent implements OnInit {
       applications.forEach(application => {
         console.log('Processing application:', application);
         if (application.aadharNumber) {
-          this.stateNodalService.compareAadharData(application.aadharNumber).subscribe(result => {
+          this.stateNodalService.compareAadharData(application.aadharNumber).pipe(
+            catchError(error => {
+              console.error('Error comparing Aadhar data:', error);
+              if (error.status === 503) {
+                alert('Service is currently unavailable. Please try again later.');
+              }
+              return of(null); // Return a null observable to continue the stream
+            })
+          ).subscribe(result => {
             if (result === 'Aadhar data matches.') {
               this.studentApplications.push(application);
             } else {
@@ -185,6 +194,11 @@ rejectInstitute(code: string): void {
           } else {
             this.selectedApplication = data; // Handle case where data is not an array
           }
+
+          // Remove the status and statusM fields
+          delete this.selectedApplication.status;
+          delete this.selectedApplication.statusM;
+
           this.isApplicationVisible = true;
           console.log('Selected application:', this.selectedApplication);
         },
@@ -195,6 +209,7 @@ rejectInstitute(code: string): void {
       );
     }
   }
+
  
   acceptApplication(aadhar: string): void {
     const application = this.studentApplications.find(app => app.aadharNumber === aadhar);
